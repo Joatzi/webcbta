@@ -1,0 +1,52 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+{% block title %}{{ carrera.titulo }}{% endblock %}
+
+{% block content %}
+<section class="page-section cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-8 mx-auto">
+        <div class="cta-inner text-left rounded p-5 bg-white text-dark">
+          
+          <button type="button" onclick="window.location.href='/carreras/';" class="btn btn-secondary btn-sm mb-4 text-white" style="cursor: pointer !important; z-index: 99999; position: relative;">
+            <i class="fa fa-arrow-left"></i> Volver a carreras
+          </button>
+          
+          <h1 class="font-weight-bold text-success mb-2">{{ carrera.titulo }}</h1>
+          <p class="text-muted mb-4"><i class="fa fa-clock-o"></i> Duración estimada: <strong>{{ carrera.duracion }}</strong></p>
+
+          {% if carrera.imagen_portada %}
+            <img src="{{ carrera.imagen_portada.url }}" class="img-fluid rounded mb-4 w-100" style="max-height: 400px; object-fit: cover;" alt="{{ carrera.titulo }}">
+          {% endif %}
+
+          <div class="article-content style-text fs-5 mb-5" style="line-height: 1.8;">
+            {{ carrera.contenido_completo|safe }}
+          </div>
+
+          {% if carrera.imagenes.all %}
+            <hr class="my-4">
+            <h3 class="h5 font-weight-bold text-success mb-4"><i class="fa fa-camera"></i> Galería de Fotos</h3>
+            <div class="row">
+              {% for item in carrera.imagenes.all %}
+                <div class="col-md-4 col-sm-6 mb-4">
+                  <div class="card h-100 border shadow-sm">
+                    <img src="{{ item.imagen.url }}" class="card-img-top rounded-top" style="height: 160px; object-fit: cover;" alt="{{ item.descripcion|default:carrera.titulo }}">
+                    {% if item.descripcion %}
+                      <div class="card-body p-2 bg-light">
+                        <p class="card-text small text-muted text-center">{{ item.descripcion }}</p>
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

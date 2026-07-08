@@ -1,0 +1,95 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+{% block title %}Alumnos | CBTa 108{% endblock %}
+
+{% block content %}
+<section class="page-section about-heading">
+  <div class="container">
+    <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{% static 'web/img/alumnos.png' %}" alt="Alumnos CBTa 108">
+    <div class="about-heading-content">
+      <div class="row">
+        <div class="col-xl-9 col-lg-10 mx-auto">
+          <div class="bg-faded rounded p-5 mb-5">
+            
+            <h2 class="section-heading mb-4">
+              <span class="section-heading-upper">Formación, cultura y liderazgo</span>
+              <span class="section-heading-lower">Actividades de los estudiantes</span>
+            </h2>
+
+            <p style="text-align: justify;">
+              En el <b>Centro de Bachillerato Tecnológico Agropecuario No. 108</b>, los estudiantes participan activamente en una amplia variedad de actividades académicas, culturales, deportivas y tecnológicas que fortalecen su formación integral. Estas experiences les permiten desarrollar conocimientos, habilidades y valores que contribuyen a su crecimiento personal, profesional y social.
+            </p>
+
+            <p style="text-align: justify;">
+              Entre las actividades más destacadas se encuentran la participación en la <b>Semana Cultural</b>, eventos <b>cívicos y culturales</b>, encuentros deportivos, concursos de <b>habilidades y destrezas</b>, así como proyectos académicos, tecnológicos y productivos relacionados con las áreas agropecuarias. Estas actividades fomentan el trabajo en equipo, la creatividad, el liderazgo y el sentido de pertenencia institucional.
+            </p>
+
+            <p style="text-align: justify;">
+              Asimismo, los alumnos representan al plantel en eventos regionales, estatales y nacionales, demostrando sus capacidades académicas, deportivas y técnicas. A través de estas experiencias, el CBTa No. 108 promueve una educación integral orientada al desarrollo de jóvenes comprometidos con su comunidad, preparados para continuar sus estudios y enfrentar con éxito los retos del futuro.
+            </p>
+
+            <hr class="my-4" style="border-top: 1px solid rgba(0, 0, 0, 0.15);">
+            
+<div class="p-3 bg-white bg-opacity-50 rounded shadow-sm">
+  <h4 class="text-success font-weight-bold h5 mb-2">
+    <i class="fa fa-graduation-cap"></i> Apoyos Económicos y Becas
+  </h4>
+  <p class="mb-0 text-dark" style="text-align: justify;">
+    Los estudiantes del Centro de Bachillerato Tecnológico Agropecuario No. 108 cuentan con apoyos económicos como la 
+    <b>Beca Universal de Educación Media Superior 'Benito Juárez'</b>, que les permite continuar y concluir sus estudios, fortaleciendo su formación integral.
+    Para más información, visita el 
+    <a href="https://www.gob.mx/becasbenitojuarez/articulos/beca-universal-de-educacion-media-superior-benito-juarez" target="_blank" class="text-success font-weight-bold">
+      sitio oficial de la beca
+    </a>.
+  </p>
+</div>
+
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 col-lg-10 mx-auto">
+        
+        <h3 class="text-white text-center mb-4 font-weight-bold" style="letter-spacing: 2px;">
+          <i class="fa fa-bullhorn"></i> AVISOS Y PUBLICACIONES RECIENTES
+        </h3>
+
+        {% for publicacion in publicaciones %}
+          <div class="bg-white rounded p-5 text-dark mb-4 shadow-lg">
+            
+            <div class="mb-3 border-bottom pb-2">
+              <span class="text-success small font-weight-bold">
+                <i class="fa fa-calendar"></i> {{ publicacion.fecha_publicacion|date:"d \d\e F, Y" }}
+              </span>
+              <h2 class="font-weight-bold h3 text-success mt-1 mb-2">{{ publicacion.titulo }}</h2>
+            </div>
+            
+            {% if publicacion.imagen_destacada %}
+              <div class="text-center mb-4">
+                <img src="{{ publicacion.imagen_destacada.url }}" class="img-fluid rounded shadow-sm w-100" style="max-height: 380px; object-fit: cover;" alt="{{ publicacion.titulo }}">
+              </div>
+            {% endif %}
+
+            <div class="article-content fs-5 text-justify" style="line-height: 1.7;">
+              {{ publicacion.contenido|safe }}
+            </div>
+
+          </div>
+        {% empty %}
+          <div class="bg-faded rounded p-5 text-center text-dark opacity-75">
+            <p class="mb-0 font-weight-bold">No hay eventos o avisos recientes publicados en este momento.</p>
+          </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

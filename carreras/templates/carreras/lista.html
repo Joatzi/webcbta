@@ -1,0 +1,50 @@
+{% extends 'web/base.html' %}
+{% load static %}
+
+{% block title %}Nuestras Carreras{% endblock %}
+
+{% block content %}
+<section class="page-section cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <div class="cta-inner text-center rounded p-5" style="background-color: rgba(255, 255, 255, 0.9);">
+          
+          <h2 class="section-heading mb-5">
+            <span class="section-heading-upper">Oferta Educativa</span>
+            <span class="section-heading-lower">Nuestras Carreras</span>
+          </h2>
+
+          <div class="row text-left text-dark">
+            {% for carrera in carreras %}
+              <div class="col-md-12 mb-4 p-4 border rounded shadow-sm bg-white">
+                <div class="row align-items-center">
+                  {% if carrera.imagen_portada %}
+                    <div class="col-md-4 mb-3 mb-md-0">
+                      <img src="{{ carrera.imagen_portada.url }}" class="img-fluid rounded" alt="{{ carrera.titulo }}">
+                    </div>
+                  {% endif %}
+                  <div class="{% if carrera.imagen_portada %}col-md-8{% else %}col-md-12{% endif %}">
+                    <h3 class="h4 font-weight-bold text-success mb-1">{{ carrera.titulo }}</h3>
+                    <p class="text-muted small mb-2"><i class="fa fa-clock-o"></i> Duración: {{ carrera.duracion }}</p>
+                    <p class="text-secondary">{{ carrera.resumen }}</p>
+                    
+                    <a href="{{ carrera.get_absolute_url }}" class="btn btn-primary btn-sm text-white mt-2">
+                      Más información &rarr;
+                    </a>
+                  </div>
+                </div>
+              </div>
+            {% empty %}
+              <div class="col-12 text-center">
+                <p class="text-muted">Próximamente se añadirán las carreras disponibles.</p>
+              </div>
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

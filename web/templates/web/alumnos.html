@@ -1,0 +1,35 @@
+{% extends 'web/base.html' %}
+
+{% load static %}
+
+{% block title %}Alumnos{% endblock %}
+
+{% block content %}
+<section class="page-section about-heading">
+  <div class="container">
+    <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{% static 'web/img/alumnos.png' %}" alt="">
+    <div class="about-heading-content">
+      <div class="row">
+<div class="bg-faded rounded p-5">
+  <h2 class="section-heading mb-4">
+    <span class="section-heading-upper">Formación, cultura y liderazgo</span>
+    <span class="section-heading-lower">Actividades de los estudiantes</span>
+  </h2>
+
+  <p style="text-align: justify;">
+    En el <b>Centro de Bachillerato Tecnológico Agropecuario No. 108</b>, los estudiantes participan activamente en una amplia variedad de actividades académicas, culturales, deportivas y tecnológicas que fortalecen su formación integral. Estas experiencias les permiten desarrollar conocimientos, habilidades y valores que contribuyen a su crecimiento personal, profesional y social.
+  </p>
+
+  <p style="text-align: justify;">
+    Entre las actividades más destacadas se encuentran la participación en la <b>Semana Cultural</b>, eventos <b>cívicos y culturales</b>, encuentros deportivos, concursos de <b>habilidades y destrezas</b>, así como proyectos académicos, tecnológicos y productivos relacionados con las áreas agropecuarias. Estas actividades fomentan el trabajo en equipo, la creatividad, el liderazgo y el sentido de pertenencia institucional.
+  </p>
+
+  <p style="text-align: justify;">
+    Asimismo, los alumnos representan al plantel en eventos regionales, estatales y nacionales, demostrando sus capacidades académicas, deportivas y técnicas. A través de estas experiencias, el CBTa No. 108 promueve una educación integral orientada al desarrollo de jóvenes comprometidos con su comunidad, preparados para continuar sus estudios y enfrentar con éxito los retos del futuro.
+  </p>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

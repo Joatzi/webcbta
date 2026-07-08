@@ -1,0 +1,27 @@
+{% extends 'web/base.html' %}
+
+{% load static %}
+
+{% block title %}Misión{% endblock %}
+
+{% block content %}
+<section class="page-section about-heading">
+  <div class="container">
+    <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{% static 'web/img/mision_actual.jpg' %}" alt="">
+    <div class="about-heading-content">
+      <div class="row">
+        <div class="col-xl-9 col-lg-10 mx-auto">
+          <div class="bg-faded rounded p-5">
+            <h2 class="section-heading mb-4">
+              <span class="section-heading-upper">Educación, innovación y compromiso</span>
+              <span class="section-heading-lower">Misión</span>
+            </h2>
+            <p style="text-align: justify;">Ofrecer en el tipo educativo medio superior un bachillerato bivalente; con una formación integral, social, humanista y tecnológica agropecuaria. Centrada en la persona, que consolide el conocimiento, fortalezca la pertinencia y fomente la mentalidad emprendedora y de liderazgo, así como brindar servicios de capacitación y extensionismo rural.</p>
+            <p style="text-align: justify;">El centro de bachillerato tecnologico agropecuario No. 108 promueve el desarrollo de competencias tecnológicas y humanas que preparen a sus alumnos para continuar su formación y contribuir al progreso social y productivo de Villa Juarez y la región.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

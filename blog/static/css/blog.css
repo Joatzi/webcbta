@@ -1,0 +1,111 @@
+
+:root {
+    --fb-bg: #f0f2f5;           
+    --card-bg: #ffffff;         
+    --primary-color: #1877f2;   /* Azul clásico de botones y links */
+    --text-main: #050505;       /* Texto oscuro principal */
+    --text-muted: #65676b;     /* Texto gris para fechas y autores */
+    --border-color: #ced0d4;
+    --radius: 12px;             /* Esquinas redondeadas modernas */
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilos Base --- */
+body { 
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif; 
+    background-color: var(--fb-bg);
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+a { 
+    color: var(--primary-color);
+    text-decoration: none; 
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.main-container {
+    max-width: 680px;          
+    margin: 0 auto;           
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#content {
+    width: 100%;
+}
+#sidebar {
+    display: none;             
+}
+
+/* Encabezado del Blog */
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 10px 0;
+    text-align: center;        
+    background-color: #85909e;
+    text-decoration: double;
+
+}
+
+
+.post-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+
+.post-header h2 {
+    margin: 0 0 4px 0;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.date { 
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: 0;
+}
+
+
+.post-body {
+    font-size: 15px;
+    color: var(--text-main);
+    word-break: break-word;    
+}
+
+.post-image-container {
+    width: 100%;
+    max-height: 380px;         
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+}
+
+.post-image-preview {
+    width: 100%;
+    height: 100%;
+    max-height: 380px;
+    object-fit: contain;      
+}

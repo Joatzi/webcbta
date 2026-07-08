@@ -1,0 +1,27 @@
+{% extends 'web/base.html' %}
+
+{% load static %}
+
+{% block title %}Visión{% endblock %}
+
+{% block content %}
+<section class="page-section about-heading">
+  <div class="container">
+    <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{% static 'web/img/vision.png' %}" alt="">
+    <div class="about-heading-content">
+      <div class="row">
+        <div class="col-xl-9 col-lg-10 mx-auto">
+          <div class="bg-faded rounded p-5">
+            <h2 class="section-heading mb-4">
+              <span class="section-heading-upper">Innovación, liderazgo y excelencia educativa</span>
+              <span class="section-heading-lower">Visión</span>
+            </h2>
+            <p style="text-align: justify;">Ofrecer una educación pertinente, incluyente, innovadora e íntegramente formativa que contribuya al desarrollo sustentable del país, y cuyos resultados sigan siendo reconocidos por su calidad..</p>
+            <p style="text-align: justify;"> El centro de bachillerato tecnologico agropecuario No. 108 busca consolidarse como un referente en la formación de jóvenes capaces de transformar su comunidad con creatividad, conocimiento y sentido de responsabilidad social.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
