@@ -1,5 +1,3 @@
-
-
 body {
   font-family: 'Lora';
   background: linear-gradient(
@@ -29,8 +27,7 @@ p {
   color: rgba(255, 255, 255, 0.3);
 }
 
-   ENCABEZADO
-
+/* ENCABEZADO */
 
 .site-heading {
   margin-top: 5rem;
@@ -54,43 +51,48 @@ p {
   color: #0B6E4F;
 }
 
+/* NAVBAR (Sincronizado con el verde exacto de la sección CTA) */
 
-   NAVBAR
+#mainNav,
+#mainNav.navbar-shrink,
+#mainNav.bg-expanded {
+  background-color: rgba(11, 110, 79, 0.95) !important;
+  font-family: 'Raleway', sans-serif;
+  height: 60px !important;
+  min-height: 60px !important;
+  display: flex !important;
+  align-items: center;
+  border-bottom: none !important;
+}
 
-#mainNav {
-  background-color: rgba(11, 110, 79, 0.95);
-  font-family: 'Raleway';
-  height: 75px;
+.navbar-brand {
+  width: auto;
+  height: auto;
   display: flex;
   align-items: center;
 }
 
 .navbar-brand img {
-    height: 100px !important;
-    width: auto;
-    position: static;
-}
-
-.navbar-brand {
-    width: auto;
-    height: auto;
+  height: 90px !important;
+  width: auto;
+  position: relative;
+  z-index: 10;
 }
 
 #mainNav .navbar-brand {
-  color: #D4A373;
+  color: #D4A373 !important;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: rgba(255,255,255,0.90);
+  color: rgba(255, 255, 255, 0.90) !important;
   font-weight: 700;
 }
 
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #D4A373;
+  color: #D4A373 !important;
 }
 
 @media (min-width: 992px) {
-
   #mainNav .navbar-nav .nav-item .nav-link {
     font-size: 0.95rem;
     padding-left: 15px;
@@ -98,15 +100,15 @@ p {
   }
 
   #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #D4A373;
+    color: #D4A373 !important;
   }
 
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #D4A373;
+    color: #D4A373 !important;
   }
 }
 
-/* SECCIONES*/
+/* SECCIONES */
 
 .page-section {
   margin-top: 5rem;
@@ -141,13 +143,13 @@ p {
 }
 
 .bg-faded {
-  background-color: rgba(255,255,255,0.92);
+  background-color: rgba(255, 255, 255, 0.92);
 }
 
-/* BOTONES*/
+/* BOTONES */
 
 .btn {
-  box-shadow: 0px 3px 3px 0px rgba(33,37,41,0.1);
+  box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
 }
 
 .btn-xl {
@@ -171,16 +173,13 @@ p {
   border-color: #B08968;
 }
 
-/* 
-   INTRO
-*/
+/* INTRO */
 
 .intro {
   position: relative;
 }
 
 @media (min-width: 992px) {
-
   .intro .intro-img {
     width: 75%;
     float: right;
@@ -207,19 +206,19 @@ p {
   }
 }
 
-/* CTA*/
+/* CTA */
 
 .cta {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(11,110,79,0.90);
+  background-color: rgba(11, 110, 79, 0.90);
 }
 
 .cta .cta-inner {
   position: relative;
   padding: 3rem;
   margin: 0.5rem;
-  background-color: rgba(255,255,255,0.95);
+  background-color: rgba(255, 255, 255, 0.95);
   border-radius: 10px;
 }
 
@@ -231,20 +230,19 @@ p {
   bottom: -0.5rem;
   left: -0.5rem;
   right: -0.5rem;
-  border: 0.25rem solid rgba(255,255,255,0.95);
+  border: 0.25rem solid rgba(255, 255, 255, 0.95);
 }
 
 .cta .cta-innerv {
   position: relative;
   padding: 3rem;
   margin: 0.5rem;
-  background-color: rgba(255,255,255,0.95);
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
-/* ABOUT*/
+/* ABOUT */
 
 @media (min-width: 992px) {
-
   .about-heading .about-heading-img {
     position: relative;
     z-index: 0;
@@ -257,10 +255,9 @@ p {
   }
 }
 
-/* PRODUCTOS*/
+/* PRODUCTOS */
 
 @media (min-width: 992px) {
-
   .product-item .product-item-title {
     position: relative;
     z-index: 1;
@@ -281,14 +278,14 @@ p {
   }
 }
 
-/*HORARIOS*/
+/* HORARIOS */
 
 .list-hours {
   font-size: 0.9rem;
 }
 
 .list-hours .list-hours-item {
-  border-bottom: 1px solid rgba(212,163,115,0.5);
+  border-bottom: 1px solid rgba(212, 163, 115, 0.5);
   padding-bottom: .25rem;
   margin-bottom: 1rem;
   font-style: italic;
@@ -306,17 +303,17 @@ p {
   }
 }
 
-/* FOOTER*/
+/* FOOTER */
 
 .footer {
-  background-color: rgba(11,110,79,0.95);
+  background-color: rgba(11, 110, 79, 0.90);
 }
 
 .address strong {
   font-size: 1.2rem;
 }
 
-/* UTILIDADES*/
+/* UTILIDADES */
 
 .text-primary {
   color: #D4A373 !important;
@@ -365,9 +362,9 @@ ul.errorlist {
 }
 
 .about-heading-img {
-    width: 800px;
-    height: 400px;
-    object-fit: cover;
-    display: block;
-    margin: auto;
+  width: 800px;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
 }

@@ -18,7 +18,8 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
-    <link href="{% static 'web/css/business-casual.css' %}" rel="stylesheet">
+    <!-- Se añade ?v=100 para refrescar el caché del navegador -->
+    <link href="{% static 'web/css/business-casual.css' %}?v=100" rel="stylesheet">
     
   </head>
 
@@ -29,6 +30,7 @@
       <span class="site-heading-lower">Centro de Bachillerato Tecnologico Agropecuario Num. 108</span>
     </h1>
 
+    <!-- Se quita el style="background-color..." inline para dejar controlar todo al CSS -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="{% url 'home' %}">
@@ -86,14 +88,11 @@
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-university fa-stack-1x fa-inverse"></i>
             </span>
-            </a>
-            <a href="https://www.gob.mx/becasbenitojuarez/articulos/beca-universal-de-educacion-media-superior-benito-juarez" class="link" target="_blank">
-  <span class="fa-stack fa-lg">
-    <i class="fa fa-circle fa-stack-2x"></i>
-    <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
-  </span>
-</a>
-
+          </a>
+          <a href="https://www.gob.mx/becasbenitojuarez/articulos/beca-universal-de-educacion-media-superior-benito-juarez" class="link" target="_blank">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
             </span>
           </a>
         </p>
