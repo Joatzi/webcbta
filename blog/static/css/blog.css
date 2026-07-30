@@ -2,15 +2,15 @@
 :root {
     --fb-bg: #f0f2f5;           
     --card-bg: #ffffff;         
-    --primary-color: #1877f2;   /* Azul clásico de botones y links */
-    --text-main: #050505;       /* Texto oscuro principal */
-    --text-muted: #65676b;     /* Texto gris para fechas y autores */
+    --primary-color: #1877f2;  
+    --text-main: #050505;     
+    --text-muted: #65676b;     
     --border-color: #ced0d4;
-    --radius: 12px;             /* Esquinas redondeadas modernas */
+    --radius: 12px;             
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Estilos Base --- */
+
 body { 
     margin: 0;
     padding: 0;
@@ -47,7 +47,6 @@ a:hover {
     display: none;             
 }
 
-/* Encabezado del Blog */
 h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 27px;
